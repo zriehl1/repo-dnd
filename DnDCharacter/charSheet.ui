@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1125</width>
+    <height>802</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="nameBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>241</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Character Name</string>
+   </property>
+   <widget class="QLabel" name="nameLbl">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>20</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>-70</x>
+     <y>60</y>
+     <width>1221</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="lineWidth">
+    <number>4</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="streBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>240</y>
+     <width>171</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Strength</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>66</y>
+     <width>16</width>
+     <height>851</height>
+    </rect>
+   </property>
+   <property name="lineWidth">
+    <number>4</number>
+   </property>
+   <property name="midLineWidth">
+    <number>1</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="dextBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>330</y>
+     <width>171</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Dexterity</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="consBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>420</y>
+     <width>171</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Constitution</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="inteBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>510</y>
+     <width>171</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Intelligence</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="wisdBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>600</y>
+     <width>171</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Wisdom</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="charBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>690</y>
+     <width>171</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Charisma</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="profBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>171</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Proficiency Bonus</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="inspBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>160</y>
+     <width>171</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Insparation</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
