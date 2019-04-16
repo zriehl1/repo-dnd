@@ -1,5 +1,6 @@
 class Character:
     def __init__(self):
+        self.sheetMap = {}
         self.maxHP = 0
         self.curHP = 0
         self.proficientSkills = []
@@ -28,7 +29,8 @@ class Character:
         self.inventory = []
 
     def loadFromFile(self, filename):
-        None
+        with open(filename,'r') as cs:
+            for line in cs:
 
     def saveToFile(self, filename):
         None
