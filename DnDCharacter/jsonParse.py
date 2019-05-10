@@ -14,7 +14,7 @@ class JsonObject:
 class JSONParser:
     def __init__(self,string):
         self.objects = []
-        self.current = None
+        self.current = []
         self.pos = 0
         self.parse(string)
 
@@ -22,55 +22,26 @@ class JSONParser:
         length = len(string)
         while self.pos < length:
             if string[self.pos] == '{':
-                self.current = JsonObject()
-                self.pos += 1
-                self.parseObject(string)
-                self.objects.append(self.current)
-                self.current = None
+                self.objects.append(self.parseObject(string))
             else:
                 self.pos += 1
 
     def parseObject(self,string):
+        self.current.insert(0,JsonObject)
         while string[self.pos] != '}':
             if string[self.pos] == '"':
-                self.parseKey(string)
                 self.pos += 1
+                self.parseKeyVal(string)
             else:
                 self.pos += 1
 
-    def parseKey(self,string):
+    def parseKeyVal(self,string):
         key = ''
         while string[self.pos] != '"':
             key += string[self.pos]
             self.pos += 1
-        self.current[key] = None
-        self.parseValue(string,key)
+        self.pos += 1
+        self.current[0][key] = self.parseVal(string)
 
-    def parseValue(self,string,key): # a value can be a JsonObject {}, a list [], a string "", or a number 99
-        numerals = "1234567890"
-        reserved = '{["'
-        errors = '}]'
-        while string[self.pos] not in numerals or string[self.pos] not in reserved:
-            if string[self.pos] in errors:
-                raise Exception("Invalid JSON formatting")
-            self.pos += 1
-        if string[self.pos] in numerals:
-            self.current[key] = self.parseNumber(string)
-        elif string[self.pos] == '"':
-            self.current[key] = self.parseString(string)
-        elif string[self.pos] == '{':
-            raise Exception("This doesn't work yet, sorry")
-        elif string[self.pos] == '[':
-            self.current[key] = self.parseList(string)
-
-    def parseNumber(self,string):
-        None
-
-    def parseString(self,string):
-        None
-
-    def parseList(self,string):
-        None
-
-    def parseNestedObj(self,string):
+    def parseVal(self,string):
         None
