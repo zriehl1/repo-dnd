@@ -8,8 +8,16 @@ class JsonObject:
 
     def parseText(self, text):
         None
-            
-            
-        
+
     def getKey(self, key):
         return self.dataTable[key]
+
+def getJSON(file):
+    retList = []
+    linestart = True
+    with open(file) as json:
+        curline = ""
+        for line in json:
+            if linestart:
+                if "[" in line and "]" in line:
+                    retList.append()
