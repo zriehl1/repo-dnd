@@ -1,3 +1,4 @@
+from json2 import Parser
 class Character:
     def __init__(self):
         self.sheetMap = {}
