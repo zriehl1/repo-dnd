@@ -14,7 +14,7 @@ class JsonObject:
     def keys(self):
         return dataTable.keys()
 
-    def values(self5):
+    def values(self):
         return dataTable.values()
         
 
@@ -32,9 +32,9 @@ class JSONParser:
                 self.objects.append(self.parseObject(string))
             else:
                 self.pos += 1
-        return self.objects
 
     def parseObject(self,string):
+        print(1)
         self.current.insert(0,JsonObject)
         while string[self.pos] != '}':
             if string[self.pos] == '"':
@@ -42,17 +42,23 @@ class JSONParser:
                 self.parseKeyVal(string)
             else:
                 self.pos += 1
-        return self.current.pop(0)
+        temp = self.current[0]
+        self.current.pop(0)
+        return temp
 
     def parseKeyVal(self,string):
+        print(2)
         key = ''
         while string[self.pos] != '"':
             key += string[self.pos]
             self.pos += 1
         self.pos += 1
-        self.current[0][key] = self.parseVal(string)
+        print(self.current[0])
+        temp = self.current[0]
+        temp[key] = None #self.parseVal(string)
 
     def parseVal(self,string):
+        print(3)
         numerals = "1234567890."
         starts = '{["'
-        None
+        return "None"
