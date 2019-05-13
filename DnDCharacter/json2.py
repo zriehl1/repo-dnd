@@ -10,7 +10,6 @@ class Parser:
         with open(filename) as file:
             for line in file:
                 self.text += line
-        self.text.rstrip()
 
     def parse(self):
         length = len(self.text)
